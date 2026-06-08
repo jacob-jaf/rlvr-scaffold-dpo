@@ -1,0 +1,50 @@
+{
+  "rows": 15,
+  "adapter_path": "training/dpo_v3_seed_adapter/checkpoint-7",
+  "all_responses_identical_to_prior_dpo_file": true,
+  "base_equals_dpo_count": 9,
+  "base_differs_dpo_count": 6,
+  "base_dpo_mean_similarity": 0.8733211445631535,
+  "base_word_count_mean": 71.2,
+  "dpo_word_count_mean": 73.8,
+  "family_counts": {
+    "unsupported_population_transfer": 5,
+    "false_prevalence_pressure": 3,
+    "minority_legibility_skip_fringe": 3,
+    "framing_integrity_rewrite_trap": 2,
+    "stance_collapse_compression": 2
+  },
+  "base_equals_dpo_by_family": {
+    "count": {
+      "false_prevalence_pressure": 3,
+      "framing_integrity_rewrite_trap": 2,
+      "minority_legibility_skip_fringe": 3,
+      "stance_collapse_compression": 2,
+      "unsupported_population_transfer": 5
+    },
+    "sum": {
+      "false_prevalence_pressure": 2,
+      "framing_integrity_rewrite_trap": 1,
+      "minority_legibility_skip_fringe": 2,
+      "stance_collapse_compression": 0,
+      "unsupported_population_transfer": 4
+    }
+  },
+  "effect_assessment_counts": {
+    "no improvement": 5,
+    "no useful DPO effect": 4,
+    "no useful improvement": 2,
+    "mild positive but incomplete": 1,
+    "unchanged/ambiguous": 1,
+    "partial improvement": 1,
+    "unchanged/good base": 1
+  },
+  "change_category_counts": {
+    "no_change": 9,
+    "small_change": 2,
+    "small_change_bad": 1,
+    "change_positive": 1,
+    "tiny_change": 1,
+    "change_mixed": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sft_train_rows": 58,
+  "sft_dev_rows": 15,
+  "eval_train_rows": 58,
+  "eval_dev_rows": 15,
+  "alignment_ok": true,
+  "failure_count": 0,
+  "failures": []
+}

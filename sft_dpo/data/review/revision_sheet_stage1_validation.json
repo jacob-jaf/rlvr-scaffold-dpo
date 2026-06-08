@@ -1,0 +1,9 @@
+{
+  "rows": 73,
+  "revision_required": 61,
+  "chosen_response_revised_nonempty": 73,
+  "blocking_missing_required_revisions": 0,
+  "dpo_use_false": 1,
+  "can_build_stage1_without_allow_missing": true,
+  "blocking_pair_ids": []
+}

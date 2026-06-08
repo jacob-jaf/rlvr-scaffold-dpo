@@ -1,0 +1,59 @@
+{
+  "purpose": "Harder scaffold-dropout / context-distillation DPO bank. Preserves empirical substrate while dropping behavioral handholding more aggressively than Phase 2 v1.",
+  "source_train": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\prepared\\sft_train.jsonl",
+  "source_dev": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\prepared\\sft_dev.jsonl",
+  "pairs_csv": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\prepared\\sft_dpo_pairs_all_prepared.csv",
+  "target_distribution_source": "embedded_fallback_constants",
+  "seed": 42,
+  "source_rows_selected": 55,
+  "train_source_rows_selected": 40,
+  "dev_source_rows_selected": 15,
+  "scaffold_variants": [
+    "H0_full_original_control",
+    "H5_ordered_options_only",
+    "H6_raw_numeric_distribution",
+    "H7_no_prior_anchor_ordered_options",
+    "H8_raw_numeric_adversarial_pressure",
+    "H9_insufficient_prevalence_control"
+  ],
+  "bank_rows": 330,
+  "dpo_candidate_eligible_rows": 220,
+  "source_counts_by_split": {
+    "train": 40,
+    "dev": 15
+  },
+  "source_counts_by_family": {
+    "unsupported_population_transfer": 17,
+    "false_prevalence_pressure": 14,
+    "stance_collapse_compression": 9,
+    "minority_legibility_skip_fringe": 9,
+    "framing_integrity_rewrite_trap": 6
+  },
+  "bank_counts_by_variant": {
+    "H0_full_original_control": 55,
+    "H5_ordered_options_only": 55,
+    "H6_raw_numeric_distribution": 55,
+    "H7_no_prior_anchor_ordered_options": 55,
+    "H8_raw_numeric_adversarial_pressure": 55,
+    "H9_insufficient_prevalence_control": 55
+  },
+  "bank_counts_by_family": {
+    "unsupported_population_transfer": 102,
+    "false_prevalence_pressure": 84,
+    "stance_collapse_compression": 54,
+    "minority_legibility_skip_fringe": 54,
+    "framing_integrity_rewrite_trap": 36
+  },
+  "variant_notes": {
+    "H0_full_original_control": "Original full Stage 1 scaffold. Control only; not a dropout candidate.",
+    "H5_ordered_options_only": "Ordered empirical options only; no behavior rules, no qualitative tier labels, no rationales.",
+    "H6_raw_numeric_distribution": "Raw numeric distribution; tests whether model converts to qualitative prose and avoids exact numeric leakage without explicit rule.",
+    "H7_no_prior_anchor_ordered_options": "No prior assistant summary; ordered options and tiers only. Tests whether previous public-summary turns were carrying the behavior.",
+    "H8_raw_numeric_adversarial_pressure": "Raw numeric distribution plus synthesized adversarial user pressure. Strongest DPO-candidate variant.",
+    "H9_insufficient_prevalence_control": "Insufficient-information control: prevalence/order removed. Do not use for DPO unless the desired answer is abstention or bounded uncertainty."
+  },
+  "outputs": {
+    "bank_jsonl": "prepared\\scaffold_dropout_harder_bank.jsonl",
+    "selected_source_rows_csv": "prepared\\scaffold_dropout_harder_selected_source_rows.csv"
+  }
+}

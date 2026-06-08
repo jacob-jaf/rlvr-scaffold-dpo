@@ -1,0 +1,199 @@
+{
+  "validity": {
+    "rows": 60,
+    "columns": 27,
+    "unique_pair_ids": 15,
+    "condition_counts": {
+      "condition_A": 15,
+      "condition_B": 15,
+      "condition_D": 15,
+      "condition_C": 15
+    },
+    "family_counts": {
+      "unsupported_population_transfer": 20,
+      "minority_legibility_skip_fringe": 12,
+      "false_prevalence_pressure": 12,
+      "framing_integrity_rewrite_trap": 8,
+      "stance_collapse_compression": 8
+    },
+    "score_columns": 15,
+    "missing_score_values": 0,
+    "out_of_range_score_values": 0,
+    "missing_notes": 0,
+    "missing_preference_notes": 0,
+    "condition_key": {
+      "base_hf_generated": "condition_A",
+      "human_approved_chosen_reference": "condition_B",
+      "dpo_v3_seed_generated": "condition_C",
+      "observed_rejected_reference": "condition_D"
+    }
+  },
+  "mean_scores_by_condition": [
+    {
+      "condition_true": "base_hf_generated",
+      "human_preserves_all_major_stances_1_5": 4.4,
+      "human_preserves_minority_stances_1_5": 4.0,
+      "human_preserves_qualitative_prevalence_1_5": 3.467,
+      "human_avoids_flattening_1_5": 3.933,
+      "human_resists_user_framing_1_5": 2.533,
+      "human_handles_prompt_intent_1_5": 4.0,
+      "human_avoids_numeric_leakage_1_5": 5.0,
+      "human_avoids_plan_or_data_leakage_1_5": 5.0,
+      "human_avoids_wrong_population_or_scope_transfer_1_5": 4.467,
+      "human_no_scaffold_intrusion_1_5": 5.0,
+      "human_naturalness_1_5": 4.067,
+      "human_non_robotic_1_5": 3.733,
+      "human_neutrality_1_5": 4.4,
+      "human_scope_discipline_1_5": 4.467,
+      "human_overall_usefulness_1_5": 2.333,
+      "n": 15
+    },
+    {
+      "condition_true": "dpo_v3_seed_generated",
+      "human_preserves_all_major_stances_1_5": 4.4,
+      "human_preserves_minority_stances_1_5": 4.0,
+      "human_preserves_qualitative_prevalence_1_5": 3.533,
+      "human_avoids_flattening_1_5": 4.133,
+      "human_resists_user_framing_1_5": 2.533,
+      "human_handles_prompt_intent_1_5": 4.0,
+      "human_avoids_numeric_leakage_1_5": 5.0,
+      "human_avoids_plan_or_data_leakage_1_5": 5.0,
+      "human_avoids_wrong_population_or_scope_transfer_1_5": 4.467,
+      "human_no_scaffold_intrusion_1_5": 5.0,
+      "human_naturalness_1_5": 3.933,
+      "human_non_robotic_1_5": 3.6,
+      "human_neutrality_1_5": 4.467,
+      "human_scope_discipline_1_5": 4.467,
+      "human_overall_usefulness_1_5": 2.333,
+      "n": 15
+    },
+    {
+      "condition_true": "human_approved_chosen_reference",
+      "human_preserves_all_major_stances_1_5": 5.0,
+      "human_preserves_minority_stances_1_5": 5.0,
+      "human_preserves_qualitative_prevalence_1_5": 4.933,
+      "human_avoids_flattening_1_5": 5.0,
+      "human_resists_user_framing_1_5": 4.933,
+      "human_handles_prompt_intent_1_5": 3.133,
+      "human_avoids_numeric_leakage_1_5": 5.0,
+      "human_avoids_plan_or_data_leakage_1_5": 4.4,
+      "human_avoids_wrong_population_or_scope_transfer_1_5": 5.0,
+      "human_no_scaffold_intrusion_1_5": 4.8,
+      "human_naturalness_1_5": 3.933,
+      "human_non_robotic_1_5": 3.0,
+      "human_neutrality_1_5": 4.933,
+      "human_scope_discipline_1_5": 5.0,
+      "human_overall_usefulness_1_5": 4.4,
+      "n": 15
+    },
+    {
+      "condition_true": "observed_rejected_reference",
+      "human_preserves_all_major_stances_1_5": 4.0,
+      "human_preserves_minority_stances_1_5": 3.8,
+      "human_preserves_qualitative_prevalence_1_5": 3.2,
+      "human_avoids_flattening_1_5": 3.867,
+      "human_resists_user_framing_1_5": 1.533,
+      "human_handles_prompt_intent_1_5": 4.8,
+      "human_avoids_numeric_leakage_1_5": 5.0,
+      "human_avoids_plan_or_data_leakage_1_5": 5.0,
+      "human_avoids_wrong_population_or_scope_transfer_1_5": 3.867,
+      "human_no_scaffold_intrusion_1_5": 5.0,
+      "human_naturalness_1_5": 3.733,
+      "human_non_robotic_1_5": 3.467,
+      "human_neutrality_1_5": 4.067,
+      "human_scope_discipline_1_5": 3.8,
+      "human_overall_usefulness_1_5": 1.6,
+      "n": 15
+    }
+  ],
+  "preference_note_counts_by_condition": [
+    {
+      "condition_true": "base_hf_generated",
+      "ACCEPTABLE": 4,
+      "MOST_FAITHFUL_BUT_ROBOTIC": 0,
+      "NOT_PREFERRED": 9,
+      "PREFERRED_FOR_PLAN": 2
+    },
+    {
+      "condition_true": "dpo_v3_seed_generated",
+      "ACCEPTABLE": 3,
+      "MOST_FAITHFUL_BUT_ROBOTIC": 0,
+      "NOT_PREFERRED": 9,
+      "PREFERRED_FOR_PLAN": 3
+    },
+    {
+      "condition_true": "human_approved_chosen_reference",
+      "ACCEPTABLE": 0,
+      "MOST_FAITHFUL_BUT_ROBOTIC": 7,
+      "NOT_PREFERRED": 0,
+      "PREFERRED_FOR_PLAN": 8
+    },
+    {
+      "condition_true": "observed_rejected_reference",
+      "ACCEPTABLE": 0,
+      "MOST_FAITHFUL_BUT_ROBOTIC": 0,
+      "NOT_PREFERRED": 14,
+      "PREFERRED_FOR_PLAN": 1
+    }
+  ],
+  "dpo_minus_base_key_metrics": [
+    {
+      "metric": "human_preserves_minority_stances_1_5",
+      "mean_dpo_minus_base": 0.0,
+      "median_dpo_minus_base": 0.0,
+      "wins": 2,
+      "ties": 12,
+      "losses": 1
+    },
+    {
+      "metric": "human_preserves_qualitative_prevalence_1_5",
+      "mean_dpo_minus_base": 0.067,
+      "median_dpo_minus_base": 0.0,
+      "wins": 1,
+      "ties": 14,
+      "losses": 0
+    },
+    {
+      "metric": "human_avoids_flattening_1_5",
+      "mean_dpo_minus_base": 0.2,
+      "median_dpo_minus_base": 0.0,
+      "wins": 3,
+      "ties": 12,
+      "losses": 0
+    },
+    {
+      "metric": "human_resists_user_framing_1_5",
+      "mean_dpo_minus_base": 0.0,
+      "median_dpo_minus_base": 0.0,
+      "wins": 1,
+      "ties": 13,
+      "losses": 1
+    },
+    {
+      "metric": "human_naturalness_1_5",
+      "mean_dpo_minus_base": -0.133,
+      "median_dpo_minus_base": 0.0,
+      "wins": 1,
+      "ties": 11,
+      "losses": 3
+    },
+    {
+      "metric": "human_non_robotic_1_5",
+      "mean_dpo_minus_base": -0.133,
+      "median_dpo_minus_base": 0.0,
+      "wins": 0,
+      "ties": 13,
+      "losses": 2
+    },
+    {
+      "metric": "human_overall_usefulness_1_5",
+      "mean_dpo_minus_base": 0.0,
+      "median_dpo_minus_base": 0.0,
+      "wins": 2,
+      "ties": 12,
+      "losses": 1
+    }
+  ],
+  "concern_observed_rejected_overall_ge_4_count": 1,
+  "interpretation_short": "Correct 60-row dev audit format. Human-approved chosen references dominate. DPO-v3-seed is essentially tied with base overall and improves only two pairs while worsening one; observed rejected has one row rated preferred/4, suggesting one dev pair negative is borderline under rater standards."
+}

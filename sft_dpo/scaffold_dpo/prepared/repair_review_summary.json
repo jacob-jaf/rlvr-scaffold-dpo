@@ -1,0 +1,9 @@
+{
+  "input": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\hard_cases\\review\\scaffold_dropout_harder_dpo_pair_review_CODED.csv",
+  "output": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\scaffold_dpo\\prepared\\scaffold_dropout_harder_dpo_pair_review_CODED_REPAIRED.csv",
+  "rows": 55,
+  "json_column": "weak_scaffold_prompt_messages_json",
+  "before_bad_json_rows": 0,
+  "after_bad_json_rows": 0,
+  "repaired_rows": 0
+}

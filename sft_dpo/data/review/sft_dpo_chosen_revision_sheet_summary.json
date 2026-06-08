@@ -1,0 +1,27 @@
+{
+  "rows": 73,
+  "revision_required_count": 61,
+  "dpo_use_false_count": 1,
+  "revision_required_by_family": {
+    "unsupported_population_transfer": 31,
+    "false_prevalence_pressure": 11,
+    "stance_collapse_compression": 10,
+    "framing_integrity_rewrite_trap": 5,
+    "minority_legibility_skip_fringe": 4
+  },
+  "dpo_excluded_pair_ids": [
+    "dpo_v3_nat_000071"
+  ],
+  "chosen_source_counts": {
+    "teacher_summary_checklist": 38,
+    "copy_teacher": 31,
+    "human_revision": 4
+  },
+  "family_counts": {
+    "unsupported_population_transfer": 31,
+    "false_prevalence_pressure": 16,
+    "minority_legibility_skip_fringe": 10,
+    "stance_collapse_compression": 10,
+    "framing_integrity_rewrite_trap": 6
+  }
+}

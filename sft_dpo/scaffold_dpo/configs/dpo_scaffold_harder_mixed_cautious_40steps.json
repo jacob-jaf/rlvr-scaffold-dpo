@@ -1,0 +1,17 @@
+{
+  "base_model": "Qwen/Qwen3-8B",
+  "load_in_4bit": true,
+  "beta": 0.05,
+  "learning_rate": 2e-6,
+  "max_steps": 40,
+  "gradient_accumulation_steps": 1,
+  "max_length": 6144,
+  "eval_steps": 10,
+  "save_steps": 10,
+  "logging_steps": 1,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "seed": 42,
+  "allow_template_fallback": false,
+  "note": "Cautious DPO context-distillation from SFT checkpoint-100. Reference policy and initial policy are both SFT100. Dataset is the approved mixed scaffold-dropout harder set."
+}

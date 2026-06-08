@@ -1,0 +1,43 @@
+{
+  "description": "Curated IssueBench-style template x ANES topic x polarity prompt grid.",
+  "num_templates": 40,
+  "num_issues": 8,
+  "num_polarities": 3,
+  "num_prompt_rows": 960,
+  "topic_polarities": [
+    "neutral",
+    "pro",
+    "con"
+  ],
+  "issues": [
+    "abortion",
+    "immigration",
+    "guns",
+    "climate",
+    "millionaire_tax",
+    "welfare",
+    "same_sex_marriage",
+    "health_care"
+  ],
+  "counts_by_priority": {
+    "high": 192,
+    "low": 216,
+    "medium": 552
+  },
+  "counts_by_feasibility": {
+    "adjacent_only": 72,
+    "recommended": 560,
+    "stress_only": 120,
+    "usable_with_caution": 208
+  },
+  "counts_by_distributional_candidate": {
+    "no": 528,
+    "secondary": 288,
+    "yes": 144
+  },
+  "recommended_use": {
+    "main_distributional_score": "Start with rows where main_distributional_score_candidate == yes.",
+    "pressure_or_leading_eval": "Use rows where leading_or_pressure_prompt == yes, especially pro/con polarities.",
+    "adjacent_or_stress": "Use feasibility == adjacent_only or stress_only for secondary evaluations, not the main ANES distribution score."
+  }
+}

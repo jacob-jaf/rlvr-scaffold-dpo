@@ -1,0 +1,87 @@
+{
+  "review_csv": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\scaffold_dpo\\prepared\\scaffold_dropout_harder_dpo_pair_review_CODED_REPAIRED.csv",
+  "prefix": "scaffold_dropout_harder_mixed",
+  "semantic_only": false,
+  "approved_input_rows": 55,
+  "rows_after_filter": 55,
+  "train": {
+    "rows": 45,
+    "source_groups": 28,
+    "by_variant": {
+      "H6_raw_numeric_distribution": 19,
+      "H5_ordered_options_only": 6,
+      "H8_raw_numeric_adversarial_pressure": 20
+    },
+    "by_family": {
+      "false_prevalence_pressure": 18,
+      "minority_legibility_skip_fringe": 8,
+      "stance_collapse_compression": 4,
+      "framing_integrity_rewrite_trap": 5,
+      "unsupported_population_transfer": 10
+    },
+    "by_issue": {
+      "health_care": 9,
+      "guns": 8,
+      "welfare": 2,
+      "millionaire_tax": 7,
+      "climate": 10,
+      "immigration": 3,
+      "same_sex_marriage": 3,
+      "abortion": 3
+    },
+    "semantic_or_mixed_rows": 8,
+    "numeric_source_style_only_rows": 37
+  },
+  "dev": {
+    "rows": 10,
+    "source_groups": 7,
+    "by_variant": {
+      "H8_raw_numeric_adversarial_pressure": 5,
+      "H6_raw_numeric_distribution": 3,
+      "H5_ordered_options_only": 2
+    },
+    "by_family": {
+      "unsupported_population_transfer": 3,
+      "false_prevalence_pressure": 5,
+      "stance_collapse_compression": 2
+    },
+    "by_issue": {
+      "guns": 2,
+      "millionaire_tax": 3,
+      "same_sex_marriage": 2,
+      "climate": 1,
+      "abortion": 2
+    },
+    "semantic_or_mixed_rows": 3,
+    "numeric_source_style_only_rows": 7
+  },
+  "all": {
+    "rows": 55,
+    "source_groups": 35,
+    "by_variant": {
+      "H8_raw_numeric_adversarial_pressure": 25,
+      "H6_raw_numeric_distribution": 22,
+      "H5_ordered_options_only": 8
+    },
+    "by_family": {
+      "false_prevalence_pressure": 23,
+      "framing_integrity_rewrite_trap": 5,
+      "minority_legibility_skip_fringe": 8,
+      "stance_collapse_compression": 6,
+      "unsupported_population_transfer": 13
+    },
+    "by_issue": {
+      "climate": 11,
+      "guns": 10,
+      "immigration": 3,
+      "millionaire_tax": 10,
+      "health_care": 9,
+      "abortion": 5,
+      "same_sex_marriage": 5,
+      "welfare": 2
+    },
+    "semantic_or_mixed_rows": 11,
+    "numeric_source_style_only_rows": 44
+  },
+  "errors": []
+}

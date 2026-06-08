@@ -1,0 +1,72 @@
+{
+  "review_csv": "C:\\Users\\jaffi\\Documents\\RLVR\\sft_dpo\\scaffold_dpo\\prepared\\scaffold_dropout_harder_dpo_pair_review_CODED_REPAIRED.csv",
+  "prefix": "scaffold_dropout_harder_semantic_only",
+  "semantic_only": true,
+  "approved_input_rows": 55,
+  "rows_after_filter": 11,
+  "train": {
+    "rows": 9,
+    "source_groups": 7,
+    "by_variant": {
+      "H6_raw_numeric_distribution": 2,
+      "H5_ordered_options_only": 7
+    },
+    "by_family": {
+      "stance_collapse_compression": 3,
+      "minority_legibility_skip_fringe": 1,
+      "false_prevalence_pressure": 5
+    },
+    "by_issue": {
+      "health_care": 3,
+      "guns": 1,
+      "climate": 1,
+      "abortion": 1,
+      "millionaire_tax": 3
+    },
+    "semantic_or_mixed_rows": 9,
+    "numeric_source_style_only_rows": 0
+  },
+  "dev": {
+    "rows": 2,
+    "source_groups": 2,
+    "by_variant": {
+      "H5_ordered_options_only": 1,
+      "H8_raw_numeric_adversarial_pressure": 1
+    },
+    "by_family": {
+      "false_prevalence_pressure": 1,
+      "framing_integrity_rewrite_trap": 1
+    },
+    "by_issue": {
+      "climate": 1,
+      "guns": 1
+    },
+    "semantic_or_mixed_rows": 2,
+    "numeric_source_style_only_rows": 0
+  },
+  "all": {
+    "rows": 11,
+    "source_groups": 9,
+    "by_variant": {
+      "H5_ordered_options_only": 8,
+      "H8_raw_numeric_adversarial_pressure": 1,
+      "H6_raw_numeric_distribution": 2
+    },
+    "by_family": {
+      "false_prevalence_pressure": 6,
+      "framing_integrity_rewrite_trap": 1,
+      "stance_collapse_compression": 3,
+      "minority_legibility_skip_fringe": 1
+    },
+    "by_issue": {
+      "climate": 2,
+      "guns": 2,
+      "millionaire_tax": 3,
+      "health_care": 3,
+      "abortion": 1
+    },
+    "semantic_or_mixed_rows": 11,
+    "numeric_source_style_only_rows": 0
+  },
+  "errors": []
+}

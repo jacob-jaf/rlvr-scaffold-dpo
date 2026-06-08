@@ -1,0 +1,20 @@
+{
+  "source": "eval\\scaffold_dropout_harder_sft100_outputs_scored.csv",
+  "rows_in_review_sheet": 55,
+  "source_split": "train",
+  "max_per_source": 3,
+  "counts_by_variant": {
+    "H8_raw_numeric_adversarial_pressure": 25,
+    "H6_raw_numeric_distribution": 22,
+    "H5_ordered_options_only": 8
+  },
+  "counts_by_family": {
+    "false_prevalence_pressure": 23,
+    "unsupported_population_transfer": 13,
+    "minority_legibility_skip_fringe": 8,
+    "stance_collapse_compression": 6,
+    "framing_integrity_rewrite_trap": 5
+  },
+  "output_csv": "review\\scaffold_dropout_harder_dpo_pair_review_TO_LABEL.csv",
+  "note": "Rows are auto-flagged candidates only. Reviewer should approve semantic or severe public-facing failures, not merely mild style differences."
+}

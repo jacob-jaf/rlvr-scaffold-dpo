@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment and credentials
+.env
+.env.*
+*.key
+*.pem
+*.token
+
+# Editors and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.~lock.*#
+.DS_Store
+Thumbs.db
+desktop.ini
+.Rhistory
+
+# Logs and scratch files
+*.log
+*.tmp
+*.bak
+*.orig
+scratch/
+tmp/
+
+# Model and training artifacts
+sft_dpo/runs/
+**/checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Hugging Face and experiment caches
+.cache/
+huggingface/
+wandb/
+mlruns/
+lightning_logs/
+runs/
+
+# Large/generated datasets
+*.parquet
+*.arrow
+*.feather
+*.sqlite
+*.db

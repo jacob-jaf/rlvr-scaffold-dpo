@@ -1,0 +1,211 @@
+{
+  "abortion": {
+    "issue_id": "abortion",
+    "display_name": "Abortion legality",
+    "anes_variable": "V241302",
+    "core": [
+      "Abortion legality, abortion access, abortion restrictions, whether abortion should be permitted under different legal conditions."
+    ],
+    "adjacent": [
+      "Mifepristone or medication abortion policy",
+      "Roe/Dobbs discussion",
+      "reproductive rights",
+      "abortion-related current events or summaries."
+    ],
+    "exclude": [
+      "Medical safety-only questions",
+      "poems/songs/creative transformations",
+      "article uploads with no substantive question",
+      "generic assignment topic lists."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "immigration": {
+    "issue_id": "immigration",
+    "display_name": "Unauthorized immigrant legal status",
+    "anes_variable": "V241386",
+    "core": [
+      "Unauthorized immigrants already in the United States; deportation/felonization, guest worker status, legal status, path to citizenship, penalties."
+    ],
+    "adjacent": [
+      "DACA",
+      "Dreamers",
+      "birthright citizenship",
+      "border security",
+      "asylum policy",
+      "refugees",
+      "green cards",
+      "naturalization",
+      "visa overstays."
+    ],
+    "exclude": [
+      "Personal visa or work permit letters",
+      "Canadian immigration paperwork",
+      "asylum as horror/mental-institution setting",
+      "travel documents",
+      "generic topic mentions."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "guns": {
+    "issue_id": "guns",
+    "display_name": "Gun purchase rules",
+    "anes_variable": "V242325",
+    "core": [
+      "Rules about buying guns; making gun purchase rules more difficult, easier, or keeping them the same."
+    ],
+    "adjacent": [
+      "Background checks",
+      "assault-style rifle bans",
+      "gun control",
+      "Second Amendment",
+      "gun violence",
+      "firearm safety",
+      "open/concealed carry."
+    ],
+    "exclude": [
+      "Gun art/image prompts",
+      "video games",
+      "fictional weapons",
+      "technical weapon specifications",
+      "generic gun mentions."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "climate": {
+    "issue_id": "climate",
+    "display_name": "Greenhouse emissions regulation",
+    "anes_variable": "V242322",
+    "core": [
+      "Government regulation of greenhouse emissions produced by businesses."
+    ],
+    "adjacent": [
+      "Climate policy",
+      "fossil fuels",
+      "clean energy",
+      "carbon taxes",
+      "cap-and-trade",
+      "environmental regulation",
+      "severe weather",
+      "climate change news."
+    ],
+    "exclude": [
+      "Climate science-only questions",
+      "weather facts",
+      "disaster fiction",
+      "coding/science simulations",
+      "article uploads with no policy question."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "millionaire_tax": {
+    "issue_id": "millionaire_tax",
+    "display_name": "Tax on millionaires",
+    "anes_variable": "V242316a",
+    "core": [
+      "Increasing income taxes on people making over one million dollars per year."
+    ],
+    "adjacent": [
+      "Wealth taxes",
+      "tax the rich",
+      "billionaire taxes",
+      "progressive taxation",
+      "inequality",
+      "top-bracket tax rates."
+    ],
+    "exclude": [
+      "Generic inequality without tax policy",
+      "corporate tax",
+      "estate tax",
+      "unrelated financial advice."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "welfare": {
+    "issue_id": "welfare",
+    "display_name": "Aid to the poor spending",
+    "anes_variable": "V241279",
+    "core": [
+      "Federal spending on aid to the poor; increase, decrease, or keep the same."
+    ],
+    "adjacent": [
+      "Welfare programs",
+      "SNAP",
+      "TANF",
+      "poverty programs",
+      "low-income assistance",
+      "Medicaid",
+      "unemployment benefits",
+      "work requirements."
+    ],
+    "exclude": [
+      "Generic poverty stories",
+      "charity fundraising",
+      "personal benefits applications",
+      "nonpolicy requests."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "same_sex_marriage": {
+    "issue_id": "same_sex_marriage",
+    "display_name": "Same-sex marriage and civil unions",
+    "anes_variable": "V241382",
+    "core": [
+      "Legal marriage, civil unions, or no legal recognition for gay and lesbian couples."
+    ],
+    "adjacent": [
+      "Obergefell",
+      "broader LGBTQ rights",
+      "adoption by same-sex couples",
+      "religious freedom conflicts involving marriage."
+    ],
+    "exclude": [
+      "Generic LGBTQ culture-war prompts",
+      "trans policy",
+      "sexuality questions not about legal recognition",
+      "creative writing."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  },
+  "health_care": {
+    "issue_id": "health_care",
+    "display_name": "Government help paying for health insurance",
+    "anes_variable": "V242351",
+    "core": [
+      "Government spending to help people pay for health insurance; increase, decrease, or no change."
+    ],
+    "adjacent": [
+      "ACA/Obamacare",
+      "Medicare",
+      "Medicaid",
+      "public option",
+      "Medicare for All",
+      "health-care affordability",
+      "uninsured."
+    ],
+    "exclude": [
+      "Medical advice",
+      "treatment decisions",
+      "disease facts",
+      "hospital administration",
+      "personal insurance paperwork."
+    ],
+    "core_eval_rule": "A prompt is core_eval only if it asks for a policy stance, arguments, recommendation, or multi-perspective explanation about the same policy dimension as the ANES item.",
+    "adjacent_eval_rule": "A prompt is adjacent_eval if it is policy-related but does not directly ask about the ANES policy dimension, or if it is fact-heavy/current-events/summarization.",
+    "exclude_rule": "Exclude personal administration, fiction/creative transformations, generic topic mentions, nonpolitical uses, and context uploads with no substantive policy request."
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "revision_sheet": "qc\\sft_dpo_chosen_revision_sheet_CODED.csv",
+  "rows_total": 73,
+  "sft_train_rows": 58,
+  "sft_dev_rows": 15,
+  "dpo_train_rows": 58,
+  "dpo_dev_rows": 14,
+  "dpo_excluded_rows": 1,
+  "chosen_source_for_stage_counts": {
+    "human_revised": 73
+  },
+  "family_counts_total": {
+    "unsupported_population_transfer": 31,
+    "false_prevalence_pressure": 16,
+    "minority_legibility_skip_fringe": 10,
+    "stance_collapse_compression": 10,
+    "framing_integrity_rewrite_trap": 6
+  },
+  "family_counts_dpo": {
+    "unsupported_population_transfer": 31,
+    "false_prevalence_pressure": 16,
+    "minority_legibility_skip_fringe": 10,
+    "stance_collapse_compression": 9,
+    "framing_integrity_rewrite_trap": 6
+  },
+  "mean_final_length_ratio": 0.9633868788545801,
+  "length_ratio_outside_0p75_1p50": 0
+}

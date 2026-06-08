@@ -1,0 +1,1183 @@
+{
+  "version": "stance_phrase_cues_v2_guarded",
+  "description": "Guarded phrase cues with block_if_regex to prevent neutral/negated spans from firing opposite stance cues.",
+  "issue_cues": {
+    "abortion": {
+      "abortion_never_permitted": [
+        {
+          "label": "never_permitted",
+          "phrase": "never be permitted",
+          "weight": 1.2,
+          "test_text": "By law, abortion should never be permitted."
+        },
+        {
+          "label": "complete_ban",
+          "phrase": "complete legal ban on abortion",
+          "weight": 1.0,
+          "test_text": "This position supports a complete legal ban on abortion."
+        },
+        {
+          "label": "completely_illegal",
+          "phrase": "abortion should be completely illegal",
+          "weight": 1.0,
+          "test_text": "Abortion should be completely illegal under all circumstances."
+        },
+        {
+          "label": "prohibit_entirely",
+          "phrase": "prohibit abortion entirely",
+          "weight": 1.0,
+          "test_text": "The law should prohibit abortion entirely."
+        },
+        {
+          "label": "generic_ban",
+          "regex": "\\b(abortion|abortions)\\b.*\\b(never|completely|entirely|total|full|under all circumstances)\\b.*\\b(legal|permitted|allowed|ban|banned|prohibited|illegal)\\b|\\b(total|full|complete)\\b.*\\b(legal )?ban\\b.*\\babortion\\b",
+          "weight": 1.4,
+          "test_text": "This stance supports a full legal ban on abortion."
+        }
+      ],
+      "abortion_narrow_exceptions": [
+        {
+          "label": "rape_incest_life",
+          "regex": "\\babortion\\b.*\\b(only|except)\\b.*\\brape\\b.*\\bincest\\b.*\\b(life|danger)",
+          "weight": 1.3,
+          "test_text": "Abortion should only be legal for rape, incest, or danger to the woman's life."
+        },
+        {
+          "label": "narrow_exceptions",
+          "phrase": "narrow exceptions",
+          "weight": 1.0,
+          "test_text": "This view allows abortion only under narrow exceptions."
+        },
+        {
+          "label": "except_rape_incest",
+          "regex": "\\b(prohibit|illegal|ban)\\b.*\\babortion\\b.*\\bexcept\\b.*\\b(rape|incest|life)",
+          "weight": 1.0,
+          "test_text": "The law should prohibit abortion except for rape, incest, or life danger."
+        },
+        {
+          "label": "generic_narrow",
+          "regex": "\\b(abortion|abortions)\\b.*\\b(only|except|strictly)\\b.*\\b(rape|incest|life|life-danger|life-threatening)\\b",
+          "weight": 1.4,
+          "test_text": "Abortion should be illegal except for rape, incest, or saving the woman\u2019s life."
+        },
+        {
+          "label": "ban_except_limited_cases",
+          "regex": "\\b(bans?|ban|prohibit|prohibits|illegal)\\b.{0,80}\\babortion\\b.{0,80}\\b(except|limited cases|narrowly defined circumstances)\\b.{0,120}\\b(rape|incest|medical emergencies|medical emergency|danger|life)",
+          "weight": 1.2,
+          "test_text": "Many proposals ban abortion except in limited cases like rape, incest, or medical emergencies."
+        }
+      ],
+      "abortion_conditional_need": [
+        {
+          "label": "clear_need",
+          "phrase": "clear need",
+          "weight": 1.2,
+          "test_text": "Abortion should be allowed only after a clear need is established."
+        },
+        {
+          "label": "need_established",
+          "phrase": "need is established",
+          "weight": 1.2,
+          "test_text": "The law should permit abortion only after need is established."
+        },
+        {
+          "label": "demonstrated_need",
+          "phrase": "demonstrated need",
+          "weight": 1.1,
+          "test_text": "This view allows abortion beyond narrow exceptions only with demonstrated need."
+        },
+        {
+          "label": "conditional_need",
+          "phrase": "conditional need",
+          "weight": 1.0,
+          "test_text": "This is a conditional need standard for abortion."
+        },
+        {
+          "label": "generic_need",
+          "regex": "\\b(clear|established|demonstrated|showing|proven)\\b.*\\bneed\\b|\\bneed\\b.*\\b(established|demonstrated|shown|proven)\\b",
+          "weight": 1.4,
+          "test_text": "Policy should require a clear showing of need for abortions outside narrow exceptions."
+        }
+      ],
+      "abortion_personal_choice": [
+        {
+          "label": "personal_choice",
+          "phrase": "personal choice",
+          "weight": 1.3,
+          "test_text": "Abortion should be available as a matter of personal choice."
+        },
+        {
+          "label": "always_be_able",
+          "phrase": "always be able to obtain an abortion",
+          "weight": 1.1,
+          "test_text": "A woman should always be able to obtain an abortion."
+        },
+        {
+          "label": "right_to_choose",
+          "phrase": "right to choose",
+          "weight": 1.0,
+          "test_text": "This view emphasizes the right to choose to have an abortion."
+        },
+        {
+          "label": "own_choice",
+          "phrase": "own choice",
+          "weight": 1.0,
+          "test_text": "Women should be able to obtain an abortion based on their own choice."
+        },
+        {
+          "label": "generic_choice",
+          "regex": "\\b(personal choice|own choice|right to choose|choose abortion|ability to choose|matter of choice)\\b",
+          "weight": 1.4,
+          "test_text": "The law should protect a woman\u2019s ability to choose abortion."
+        },
+        {
+          "label": "bodily_autonomy_access",
+          "regex": "\\b(bodily autonomy|reproductive freedom|reproductive autonomy)\\b.{0,120}\\b(abortion|legal access|access)",
+          "weight": 1.0,
+          "test_text": "Supporters cite bodily autonomy and legal access to abortion."
+        },
+        {
+          "label": "legal_access_all_stages",
+          "regex": "\\b(legal access|legally accessible)\\b.{0,80}\\b(abortion)\\b.{0,120}\\b(all stages|broadly|without state interference|personal decision)",
+          "weight": 1.1,
+          "test_text": "They argue for legal access to abortion at all stages without state interference."
+        }
+      ]
+    },
+    "immigration": {
+      "immigration_deport_felonize": [
+        {
+          "label": "felons_and_send_back",
+          "phrase": "felons and send them back",
+          "weight": 1.3,
+          "test_text": "Make unauthorized immigrants felons and send them back to their home country."
+        },
+        {
+          "label": "classify_felons_deport",
+          "phrase": "classify all unauthorized immigrants as felons and deport",
+          "weight": 1.2,
+          "test_text": "Classify all unauthorized immigrants as felons and deport them."
+        },
+        {
+          "label": "deport_all",
+          "phrase": "deport all unauthorized immigrants",
+          "weight": 1.0,
+          "test_text": "The government should deport all unauthorized immigrants."
+        },
+        {
+          "label": "send_back_home",
+          "phrase": "sent back to their home country",
+          "weight": 1.0,
+          "test_text": "Unauthorized immigrants should be sent back to their home country."
+        },
+        {
+          "label": "generic_deport",
+          "regex": "\\b(felon|felons|felony|criminalize)\\b.*\\b(deport|send.*back)\\b|\\b(deport|send.*back)\\b.*\\b(all )?(unauthorized|undocumented|illegal)\\b",
+          "weight": 1.4,
+          "test_text": "Deport all unauthorized immigrants and make them felons."
+        },
+        {
+          "label": "felony_status_deportation",
+          "weight": 1.4,
+          "test_text": "This stance calls for felony status and deportation for unauthorized immigrants.",
+          "regex": "\\b(felony status|felons?|felony)\\b.*\\b(deportation|deport|returned home|send back)\\b|\\b(returned home|deportation|deport)\\b.*\\b(felony status|felons?|felony)\\b"
+        }
+      ],
+      "immigration_guest_worker_limited": [
+        {
+          "label": "guest_worker_program",
+          "phrase": "guest worker program",
+          "weight": 1.3,
+          "test_text": "Unauthorized immigrants should be allowed to remain through a guest worker program."
+        },
+        {
+          "label": "limited_time",
+          "phrase": "limited time",
+          "weight": 1.0,
+          "test_text": "They should be allowed to stay and work for a limited time."
+        },
+        {
+          "label": "temporary_guest_worker",
+          "phrase": "temporary guest worker",
+          "weight": 1.1,
+          "test_text": "Create a temporary guest worker program for unauthorized immigrants."
+        },
+        {
+          "label": "work_for_limited_period",
+          "phrase": "work legally for a limited period",
+          "weight": 1.0,
+          "test_text": "Unauthorized immigrants could work legally for a limited period."
+        },
+        {
+          "label": "generic_guest",
+          "regex": "\\b(guest[- ]worker|temporary.*work|work.*limited|limited.*work|limited time|limited period)\\b",
+          "weight": 1.4,
+          "test_text": "Create a temporary guest worker program for unauthorized immigrants."
+        }
+      ],
+      "immigration_citizenship_requirements": [
+        {
+          "label": "citizenship_requirements",
+          "phrase": "citizenship if they meet certain requirements",
+          "weight": 1.3,
+          "test_text": "Allow unauthorized immigrants to qualify for citizenship if they meet certain requirements.",
+          "block_if_regex": [
+            "\\b(without|no|avoiding)\\b.{0,60}\\b(punitive\\s+conditions|penalties|penalty|fines|fine|restrictive\\s+requirements|extra\\s+penalties)\\b"
+          ]
+        },
+        {
+          "label": "paying_back_taxes",
+          "phrase": "paying back taxes",
+          "weight": 1.0,
+          "test_text": "A path to citizenship should require paying back taxes.",
+          "block_if_regex": [
+            "\\b(without|no|avoiding)\\b.{0,60}\\b(punitive\\s+conditions|penalties|penalty|fines|fine|restrictive\\s+requirements|extra\\s+penalties)\\b"
+          ]
+        },
+        {
+          "label": "fines_english_background",
+          "regex": "\\b(fines|taxes|english|background checks?)\\b.*\\b(citizenship|pathway|path)\\b|\\b(citizenship|pathway|path)\\b.*\\b(fines|taxes|english|background checks?)\\b",
+          "weight": 1.1,
+          "test_text": "They should have a pathway to citizenship after fines and background checks.",
+          "block_if_regex": [
+            "\\b(without|no|avoiding)\\b.{0,60}\\b(punitive\\s+conditions|penalties|penalty|fines|fine|restrictive\\s+requirements|extra\\s+penalties)\\b"
+          ]
+        },
+        {
+          "label": "with_requirements",
+          "phrase": "with requirements",
+          "weight": 1.0,
+          "test_text": "Offer a path to citizenship with requirements.",
+          "block_if_regex": [
+            "\\b(without|no|avoiding)\\b.{0,60}\\b(punitive\\s+conditions|penalties|penalty|fines|fine|restrictive\\s+requirements|extra\\s+penalties)\\b"
+          ]
+        },
+        {
+          "label": "generic_citizenship_req",
+          "regex": "\\b(citizenship|citizen|path|pathway)\\b.*\\b(requirements?|conditions?|penalties|fines|taxes|english|background checks?)\\b|\\b(requirements?|conditions?|penalties|fines|taxes|english|background checks?)\\b.*\\b(citizenship|citizen|path|pathway)\\b",
+          "weight": 1.4,
+          "test_text": "Offer a path to citizenship with requirements like fines and English tests.",
+          "block_if_regex": [
+            "\\b(without|no|avoiding)\\b.{0,60}\\b(punitive\\s+conditions|penalties|penalty|fines|fine|restrictive\\s+requirements|extra\\s+penalties)\\b"
+          ]
+        }
+      ],
+      "immigration_citizenship_no_penalties": [
+        {
+          "label": "citizenship_without_penalties",
+          "phrase": "citizenship without penalties",
+          "weight": 1.3,
+          "test_text": "Unauthorized immigrants should qualify for citizenship without penalties."
+        },
+        {
+          "label": "without_extra_penalties",
+          "phrase": "without extra penalties",
+          "weight": 1.1,
+          "test_text": "They should have a path to citizenship without extra penalties."
+        },
+        {
+          "label": "without_imposing_fines",
+          "phrase": "without imposing fines",
+          "weight": 1.0,
+          "test_text": "The government should offer a path to citizenship without imposing fines."
+        },
+        {
+          "label": "no_penalties",
+          "phrase": "no penalties",
+          "weight": 1.0,
+          "test_text": "This view allows unauthorized immigrants to remain with no penalties."
+        },
+        {
+          "label": "generic_citizenship_no_penalties",
+          "regex": "\\b(citizenship|citizen|path|pathway)\\b.*\\b(without|no|avoiding)\\b.*\\b(penalties|fines|restrictive requirements|extra penalties)\\b|\\b(without|no)\\b.*\\b(penalties|fines)\\b",
+          "weight": 1.4,
+          "test_text": "Grant a path to citizenship without penalties or fines."
+        },
+        {
+          "label": "without_punitive_conditions",
+          "weight": 1.4,
+          "test_text": "This stance supports citizenship eligibility for unauthorized immigrants without punitive conditions.",
+          "regex": "\\b(citizenship|eligibility|path|pathway)\\b.*\\b(without|no)\\b.*\\b(punitive conditions|penalties|fines|restrictive requirements)\\b"
+        },
+        {
+          "label": "without_punitive_conditions_strong",
+          "weight": 1.8,
+          "regex": "\\b(citizenship|eligibility|path|pathway)\\b.{0,120}\\b(without|no|avoiding)\\b.{0,80}\\b(punitive\\s+conditions|penalties|fines|extra\\s+penalties|restrictive\\s+requirements)\\b",
+          "test_text": "This stance supports citizenship eligibility for unauthorized immigrants without punitive conditions."
+        }
+      ]
+    },
+    "guns": {
+      "gun_buying_more_difficult": [
+        {
+          "label": "more_difficult_buy_gun",
+          "phrase": "more difficult for people to buy a gun",
+          "weight": 1.3,
+          "test_text": "Make it more difficult for people to buy a gun."
+        },
+        {
+          "label": "harder_buy_firearm",
+          "phrase": "harder for people to buy a firearm",
+          "weight": 1.2,
+          "test_text": "It should be harder for people to buy a firearm."
+        },
+        {
+          "label": "stricter_purchase_rules",
+          "phrase": "gun purchase rules should be stricter",
+          "weight": 1.1,
+          "test_text": "Gun purchase rules should be stricter."
+        },
+        {
+          "label": "tighten_buying_rules",
+          "phrase": "tighten gun-buying rules",
+          "weight": 1.0,
+          "test_text": "The federal government should tighten gun-buying rules."
+        },
+        {
+          "label": "generic_harder",
+          "regex": "\\b(harder|more difficult|stricter|tighten(?:ing)?|tighter)\\b.*\\b(buy|buying|purchase|purchasing|gun|guns|firearm|firearms|rules|requirements)\\b",
+          "weight": 1.4,
+          "test_text": "It should be harder for people to buy a gun."
+        },
+        {
+          "label": "firearm_more_difficult",
+          "weight": 1.4,
+          "test_text": "The federal government should make buying a firearm more difficult.",
+          "regex": "\\b(buying|buy|purchase|purchasing)\\b.*\\b(firearm|gun)\\b.*\\b(more difficult|harder)\\b|\\b(more difficult|harder)\\b.*\\b(buying|buy|purchase|purchasing)\\b.*\\b(firearm|gun)\\b"
+        }
+      ],
+      "gun_buying_same": [
+        {
+          "label": "about_the_same",
+          "phrase": "about the same",
+          "weight": 1.3,
+          "test_text": "Gun-buying rules should stay about the same."
+        },
+        {
+          "label": "roughly_unchanged",
+          "phrase": "roughly unchanged",
+          "weight": 1.1,
+          "test_text": "Current gun purchase rules should remain roughly unchanged."
+        },
+        {
+          "label": "current_rules_about_right",
+          "phrase": "current gun purchase rules are about right",
+          "weight": 1.1,
+          "test_text": "Current gun purchase rules are about right."
+        },
+        {
+          "label": "maintain_existing",
+          "phrase": "maintain existing gun-buying rules",
+          "weight": 1.0,
+          "test_text": "The government should maintain existing gun-buying rules."
+        },
+        {
+          "label": "generic_same",
+          "regex": "\\b(about the same|roughly unchanged|unchanged|as they are|status quo|maintain|stay|sufficient|about right)\\b",
+          "weight": 1.4,
+          "test_text": "Current gun-buying rules should stay roughly unchanged."
+        }
+      ],
+      "gun_buying_easier": [
+        {
+          "label": "easier_buy_gun",
+          "phrase": "easier for people to buy a gun",
+          "weight": 1.3,
+          "test_text": "It should be easier for people to buy a gun."
+        },
+        {
+          "label": "loosen_purchase_restrictions",
+          "phrase": "gun purchase restrictions should be loosened",
+          "weight": 1.1,
+          "test_text": "Gun purchase restrictions should be loosened."
+        },
+        {
+          "label": "fewer_restrictions",
+          "phrase": "fewer restrictions on buying firearms",
+          "weight": 1.0,
+          "test_text": "There should be fewer restrictions on buying firearms."
+        },
+        {
+          "label": "reduce_current_restrictions",
+          "phrase": "reducing current purchase restrictions",
+          "weight": 1.0,
+          "test_text": "Make it easier to buy a gun by reducing current purchase restrictions."
+        },
+        {
+          "label": "generic_easier",
+          "regex": "\\b(easier|less difficult|loosen|looser|reduce|reducing|fewer|less)\\b.*\\b(buy|buying|purchase|purchasing|gun|guns|firearm|firearms|restrictions|barriers|requirements)\\b",
+          "weight": 1.4,
+          "test_text": "Make it easier to buy guns by reducing barriers."
+        },
+        {
+          "label": "less_difficult",
+          "weight": 1.4,
+          "test_text": "The federal government should make buying a firearm less difficult.",
+          "regex": "\\b(buying|buy|purchase|purchasing)\\b.*\\b(firearm|gun)\\b.*\\b(less difficult|easier)\\b|\\b(less difficult|easier)\\b.*\\b(buying|buy|purchase|purchasing)\\b.*\\b(firearm|gun)\\b"
+        }
+      ]
+    },
+    "climate": {
+      "greenhouse_regulation_favor": [
+        {
+          "label": "favor_increased_regulation",
+          "phrase": "favor increased government regulation",
+          "weight": 1.3,
+          "test_text": "This position favors increased government regulation of greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "support_increasing_regulations",
+          "phrase": "support increasing regulations",
+          "weight": 1.1,
+          "test_text": "Support increasing regulations on businesses that emit greenhouse gases.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "stricter_greenhouse_regulation",
+          "phrase": "stricter greenhouse emissions regulations",
+          "weight": 1.1,
+          "test_text": "There should be stricter greenhouse emissions regulations.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "regulate_high_emitters",
+          "phrase": "regulate businesses with heavy greenhouse emissions",
+          "weight": 1.0,
+          "test_text": "The government should regulate businesses with heavy greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "favor_support_more_reg",
+          "weight": 1.4,
+          "test_text": "Support more regulation of businesses with high greenhouse gas emissions.",
+          "regex": "\\b(favor|favors|support|supports|back|backs)\\b.*\\b(more|increased|increasing|stricter|tighter|tougher)\\b.*\\b(regulation|rules|emissions rules)\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "should_regulate_more",
+          "weight": 1.4,
+          "test_text": "The government should regulate major greenhouse-gas-emitting businesses more than it does now.",
+          "regex": "\\b(should|must)\\b.*\\b(regulate|increase regulation|expand regulation|tighten)\\b.*\\b(greenhouse|emissions|high-emission)",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        }
+      ],
+      "greenhouse_regulation_neither": [
+        {
+          "label": "neither_favor_nor_oppose",
+          "phrase": "neither favor nor oppose",
+          "weight": 1.3,
+          "test_text": "This view neither favors nor opposes increased greenhouse emissions regulation."
+        },
+        {
+          "label": "neutral_on_increasing",
+          "phrase": "neutral on increasing greenhouse regulation",
+          "weight": 1.1,
+          "test_text": "This position is neutral on increasing greenhouse regulation."
+        },
+        {
+          "label": "take_no_position",
+          "phrase": "take no position",
+          "weight": 1.0,
+          "test_text": "Take no position on increasing regulations for high-emission businesses."
+        },
+        {
+          "label": "generic_climate_neutral",
+          "regex": "\\b(neither favor nor oppose|neutral|take no position|no position|do not take a side|no policy preference)\\b.*\\b(greenhouse|emissions|regulation|rules|businesses)?",
+          "weight": 1.4,
+          "test_text": "Do not take a side on increasing regulation of high-emission businesses."
+        },
+        {
+          "label": "no_policy_preference",
+          "weight": 1.4,
+          "test_text": "This position expresses no policy preference for or against increasing greenhouse emissions regulation.",
+          "regex": "\\b(neither favor nor oppose|neutral|take no position|do not take a side|no policy preference)\\b"
+        },
+        {
+          "label": "neither_favors_nor_opposes_inflected",
+          "weight": 1.8,
+          "regex": "\\bneither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes)\\b.{0,120}\\b(greenhouse|emissions|regulation|rules)\\b",
+          "test_text": "This view neither favors nor opposes increased greenhouse emissions regulation."
+        }
+      ],
+      "greenhouse_regulation_oppose": [
+        {
+          "label": "oppose_increased_regulation",
+          "phrase": "oppose increased government regulation",
+          "weight": 1.3,
+          "test_text": "This position opposes increased government regulation of greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "oppose_stricter_regulation",
+          "phrase": "oppose stricter regulation",
+          "weight": 1.1,
+          "test_text": "Oppose stricter regulation of businesses that produce heavy greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "should_not_impose",
+          "phrase": "should not impose additional regulations",
+          "weight": 1.0,
+          "test_text": "The government should not impose additional regulations on greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "against_increased_rules",
+          "phrase": "against increased government rules",
+          "weight": 1.0,
+          "test_text": "This view is against increased government rules for greenhouse emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "generic_climate_oppose",
+          "regex": "\\b(oppose|opposes|opposed|against|reject|rejects)\\b.*\\b(more|increased|increasing|stricter|tighter|tougher|additional|expanded)\\b.*\\b(regulation|regulations|rules|emissions rules)\\b|\\b(should not|not)\\b.*\\b(expand|increase|impose)\\b.*\\b(regulation|regulations|rules)\\b",
+          "weight": 1.4,
+          "test_text": "Oppose more regulation of businesses with high greenhouse gas emissions.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "oppose_more_reg",
+          "weight": 1.4,
+          "test_text": "Oppose more regulation of businesses with high greenhouse gas emissions.",
+          "regex": "\\b(oppose|opposes|opposed|against|reject|rejects)\\b.*\\b(more|increased|increasing|stricter|tighter|tougher|additional|expanded)\\b.*\\b(regulation|rules|emissions rules)\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "should_not_expand",
+          "weight": 1.4,
+          "test_text": "The government should not expand regulation of businesses over greenhouse gas emissions.",
+          "regex": "\\b(should not|shouldn\\'t|not)\\b.*\\b(expand|increase|impose|add)\\b.*\\b(regulation|regulations|rules)\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        }
+      ]
+    },
+    "millionaire_tax": {
+      "millionaire_tax_favor": [
+        {
+          "label": "favor_increasing_taxes",
+          "phrase": "favor increasing income taxes",
+          "weight": 1.3,
+          "test_text": "Favor increasing income taxes on people making over one million dollars.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        },
+        {
+          "label": "support_increasing_taxes",
+          "phrase": "support increasing income taxes",
+          "weight": 1.1,
+          "test_text": "Support increasing income taxes on millionaires.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        },
+        {
+          "label": "raise_income_taxes",
+          "phrase": "raise income taxes",
+          "weight": 1.0,
+          "test_text": "The government should raise income taxes on people earning over one million dollars.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        },
+        {
+          "label": "higher_taxes_millionaires",
+          "phrase": "higher income taxes",
+          "weight": 1.0,
+          "test_text": "This position supports higher income taxes for millionaires.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        },
+        {
+          "label": "favor_support_tax",
+          "weight": 1.4,
+          "test_text": "Support increasing income taxes on millionaires.",
+          "regex": "\\b(favor|favors|support|supports)\\b.*\\b(increasing|raising|higher)\\b.*\\b(income )?tax(es)?\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        },
+        {
+          "label": "raise_taxes",
+          "weight": 1.4,
+          "test_text": "The government should raise income taxes on people making over one million dollars.",
+          "regex": "\\b(should|must|government should)\\b.*\\b(raise|increase)\\b.*\\b(income )?tax(es)?\\b.*\\b(millionaires?|over one million|over a million)\\b|\\b(raise|increase)\\b.*\\b(income )?tax(es)?\\b.*\\b(millionaires?|over one million|over a million)\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(taxes|income taxes)\\b"
+          ]
+        }
+      ],
+      "millionaire_tax_neither": [
+        {
+          "label": "neither_favor_nor_oppose",
+          "phrase": "neither favor nor oppose",
+          "weight": 1.3,
+          "test_text": "This view neither favors nor opposes increasing taxes on millionaires."
+        },
+        {
+          "label": "neutral_on_raising",
+          "phrase": "neutral on raising income taxes",
+          "weight": 1.1,
+          "test_text": "This position is neutral on raising income taxes for millionaires."
+        },
+        {
+          "label": "take_no_position",
+          "phrase": "take no position",
+          "weight": 1.0,
+          "test_text": "Take no position on increasing taxes for millionaires."
+        },
+        {
+          "label": "generic_millionaire_neutral",
+          "regex": "\\b(neither favor nor oppose|neutral|take no position|no position)\\b.*\\b(tax|taxes|millionaires?|raising|increasing)?",
+          "weight": 1.4,
+          "test_text": "Neutral on increasing income taxes for millionaires."
+        },
+        {
+          "label": "neutral_tax",
+          "weight": 1.4,
+          "test_text": "Do not take a side on raising income taxes for million-dollar earners.",
+          "regex": "\\b(neither favor nor oppose|neutral|take no position|no position|no policy preference)\\b"
+        },
+        {
+          "label": "neither_favors_nor_opposes_tax_inflected",
+          "weight": 1.8,
+          "regex": "\\bneither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes)\\b.{0,120}\\b(tax|taxes|millionaires?|income)\\b",
+          "test_text": "This view neither favors nor opposes increasing taxes on millionaires."
+        },
+        {
+          "label": "do_not_take_side_tax",
+          "weight": 1.8,
+          "regex": "\\bdo\\s+not\\s+take\\s+a\\s+side\\b.{0,120}\\b(raising|increasing|higher|tax|taxes|million|millionaires?)\\b",
+          "test_text": "Do not take a side on raising income taxes for million-dollar earners."
+        }
+      ],
+      "millionaire_tax_oppose": [
+        {
+          "label": "oppose_increasing_taxes",
+          "phrase": "oppose increasing income taxes",
+          "weight": 1.3,
+          "test_text": "Oppose increasing income taxes on people making over one million dollars.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "against_raising_taxes",
+          "phrase": "against raising income taxes",
+          "weight": 1.1,
+          "test_text": "This view is against raising income taxes for millionaires.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "should_not_raise",
+          "phrase": "should not raise taxes",
+          "weight": 1.0,
+          "test_text": "The government should not raise taxes on people making over one million dollars.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "not_raise_income_taxes",
+          "phrase": "not raise income taxes",
+          "weight": 1.0,
+          "test_text": "Do not raise income taxes on millionaires.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "generic_millionaire_oppose",
+          "regex": "\\b(oppose|opposes|against|not|should not|avoid)\\b.*\\b(raise|raising|increase|increasing|higher)\\b.*\\b(income )?tax(es)?\\b|\\b(avoid higher tax burdens|avoid overtaxation)\\b",
+          "weight": 1.4,
+          "test_text": "Oppose increasing income taxes on millionaires.",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "oppose_tax",
+          "weight": 1.4,
+          "test_text": "Oppose raising income taxes on people earning over one million dollars a year.",
+          "regex": "\\b(oppose|opposes|opposed|against|reject|rejects)\\b.*\\b(raising|increasing|higher)\\b.*\\b(income )?tax(es)?\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "not_raise_tax",
+          "weight": 1.4,
+          "test_text": "The government should not raise taxes on people making over one million dollars.",
+          "regex": "\\b(should not|shouldn\\'t|not|avoid)\\b.*\\b(raise|increase|higher)\\b.*\\b(income )?tax(es)?\\b|\\b(avoid higher tax burdens|avoid overtaxation)\\b",
+          "block_if_regex": [
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b",
+            "\\b(neither\\s+(?:favor|favors|support|supports)\\s+nor\\s+(?:oppose|opposes|against)|neutral|no\\s+policy\\s+preference|do\\s+not\\s+take\\s+a\\s+side|take\\s+no\\s+position|no\\s+position)\\b"
+          ]
+        },
+        {
+          "label": "rejects_higher_taxes",
+          "weight": 1.8,
+          "regex": "\\b(reject|rejects|oppose|opposes|against)\\b.{0,80}\\b(higher|increasing|raising)\\b.{0,80}\\b(income\\s+)?tax(es)?\\b.{0,80}\\b(millionaires?|one-million|one million|million-dollar)?",
+          "test_text": "This stance rejects higher income taxes for people above the one-million-dollar threshold."
+        }
+      ]
+    },
+    "welfare": {
+      "aid_to_poor_increase": [
+        {
+          "label": "spending_increased",
+          "phrase": "spending on aid to the poor should be increased",
+          "weight": 1.3,
+          "test_text": "Federal spending on aid to the poor should be increased."
+        },
+        {
+          "label": "increase_federal_spending",
+          "phrase": "increase federal spending on aid to the poor",
+          "weight": 1.2,
+          "test_text": "Increase federal spending on aid to the poor."
+        },
+        {
+          "label": "more_aid_to_poor",
+          "phrase": "more aid to poor people",
+          "weight": 1.0,
+          "test_text": "The government should provide more aid to poor people."
+        },
+        {
+          "label": "stronger_safety_net",
+          "phrase": "stronger financial safety net",
+          "weight": 0.9,
+          "test_text": "Increase aid to the poor to provide a stronger financial safety net."
+        },
+        {
+          "label": "go_up",
+          "weight": 1.4,
+          "test_text": "Federal spending on aid to the poor should go up.",
+          "phrase": "should go up"
+        },
+        {
+          "label": "increased_spending",
+          "weight": 1.4,
+          "test_text": "Aid-to-the-poor spending by the federal government should be increased.",
+          "regex": "\\b(spending|funding|aid-to-the-poor|aid to the poor)\\b.*\\b(should be increased|increased|go up|more)\\b|\\b(increase|more)\\b.*\\b(spending|funding|aid to the poor|aid-to-the-poor)\\b"
+        },
+        {
+          "label": "allocate_more_money_aid_poor",
+          "weight": 1.8,
+          "regex": "\\b(allocate|provide|spend)\\b.{0,40}\\b(more|greater|additional)\\b.{0,40}\\b(federal\\s+)?(money|funding|spending)\\b.{0,80}\\b(aid|assistance|support)\\b.{0,40}\\b(poor|low-income)\\b",
+          "test_text": "The government should allocate more federal money to aid for poor people."
+        },
+        {
+          "label": "greater_spending_assistance_poor",
+          "weight": 1.8,
+          "regex": "\\b(greater|higher|more)\\b.{0,60}\\b(federal\\s+)?spending\\b.{0,80}\\b(assistance|aid|support)\\b.{0,40}\\b(poor|low-income)\\b",
+          "test_text": "This stance supports greater federal spending on assistance for the poor."
+        }
+      ],
+      "aid_to_poor_same": [
+        {
+          "label": "spending_kept_same",
+          "phrase": "spending on aid to the poor should be kept the same",
+          "weight": 1.3,
+          "test_text": "Federal spending on aid to the poor should be kept the same."
+        },
+        {
+          "label": "remain_the_same",
+          "phrase": "should remain the same",
+          "weight": 1.1,
+          "test_text": "Federal spending on aid to the poor should remain the same."
+        },
+        {
+          "label": "current_funding_levels",
+          "phrase": "current funding levels are adequate",
+          "weight": 1.0,
+          "test_text": "Current funding levels for aid to the poor are adequate."
+        },
+        {
+          "label": "current_spending_about_right",
+          "phrase": "current spending on aid to the poor is about right",
+          "weight": 1.0,
+          "test_text": "Current spending on aid to the poor is about right."
+        },
+        {
+          "label": "same_spending",
+          "weight": 1.4,
+          "test_text": "Aid-to-the-poor spending by the federal government should be kept unchanged.",
+          "regex": "\\b(spending|funding|aid-to-the-poor|aid to the poor)\\b.*\\b(should stay the same|should remain the same|kept unchanged|present level|same|unchanged)\\b|\\b(keep|kept|maintain)\\b.*\\b(spending|funding|aid to the poor|aid-to-the-poor)\\b.*\\b(same|unchanged|present)\\b"
+        },
+        {
+          "label": "maintain_current_funding_aid_poor",
+          "weight": 1.8,
+          "regex": "\\b(maintain|keep)\\b.{0,60}\\b(current|existing)\\b.{0,60}\\b(federal\\s+)?(funding|spending|money)\\b.{0,80}\\b(aid|assistance|support)\\b.{0,40}\\b(poor|low-income)\\b",
+          "test_text": "The government should maintain current federal funding for aid to poor people."
+        }
+      ],
+      "aid_to_poor_decrease": [
+        {
+          "label": "spending_decreased",
+          "phrase": "spending on aid to the poor should be decreased",
+          "weight": 1.3,
+          "test_text": "Federal spending on aid to the poor should be decreased."
+        },
+        {
+          "label": "decrease_federal_spending",
+          "phrase": "decrease federal spending on aid to the poor",
+          "weight": 1.2,
+          "test_text": "Decrease federal spending on aid to the poor."
+        },
+        {
+          "label": "reduce_aid_to_poor",
+          "phrase": "reduce aid to poor people",
+          "weight": 1.0,
+          "test_text": "The government should reduce aid to poor people."
+        },
+        {
+          "label": "cut_spending",
+          "phrase": "cut spending on aid to the poor",
+          "weight": 1.0,
+          "test_text": "Cut spending on aid to the poor."
+        },
+        {
+          "label": "decreased_spending",
+          "weight": 1.4,
+          "test_text": "Federal spending on aid to the poor should go down.",
+          "regex": "\\b(spending|funding|aid-to-the-poor|aid to the poor)\\b.*\\b(should be decreased|decreased|go down|less|cut|reduced)\\b|\\b(decrease|reduce|cut|less)\\b.*\\b(spending|funding|aid to the poor|aid-to-the-poor)\\b"
+        },
+        {
+          "label": "allocate_less_money_aid_poor",
+          "weight": 1.8,
+          "regex": "\\b(allocate|provide|spend)\\b.{0,40}\\b(less|lower|reduced)\\b.{0,40}\\b(federal\\s+)?(money|funding|spending)\\b.{0,80}\\b(aid|assistance|support)\\b.{0,40}\\b(poor|low-income)\\b",
+          "test_text": "The government should allocate less federal money to aid for poor people."
+        },
+        {
+          "label": "lower_spending_assistance_poor",
+          "weight": 1.8,
+          "regex": "\\b(lower|less|reduced)\\b.{0,60}\\b(federal\\s+)?spending\\b.{0,80}\\b(assistance|aid|support)\\b.{0,40}\\b(poor|low-income)\\b",
+          "test_text": "This stance supports lower federal spending on assistance for the poor."
+        }
+      ]
+    },
+    "same_sex_marriage": {
+      "ssm_legal_marriage": [
+        {
+          "label": "legally_marry",
+          "phrase": "allowed to legally marry",
+          "weight": 1.3,
+          "test_text": "Gay and lesbian couples should be allowed to legally marry.",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        },
+        {
+          "label": "same_sex_legal_marriage",
+          "phrase": "same-sex couples should be allowed to legally marry",
+          "weight": 1.3,
+          "test_text": "Same-sex couples should be allowed to legally marry.",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        },
+        {
+          "label": "law_should_permit_marriage",
+          "phrase": "law should permit gay and lesbian couples to legally marry",
+          "weight": 1.1,
+          "test_text": "The law should permit gay and lesbian couples to legally marry.",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        },
+        {
+          "label": "recognize_marriages",
+          "phrase": "recognize marriages between same-sex couples",
+          "weight": 1.0,
+          "test_text": "The government should legally recognize marriages between same-sex couples.",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        },
+        {
+          "label": "generic_ssm_marriage",
+          "regex": "\\b(legally marry|legal marriage|right to marry|allowed to marry|recognize marriages?)\\b",
+          "weight": 1.4,
+          "test_text": "Same-sex couples should be allowed to legally marry.",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        },
+        {
+          "label": "permit_marry_legally",
+          "weight": 1.4,
+          "test_text": "The law should permit gay and lesbian couples to marry legally.",
+          "regex": "\\b(permit|allow|allowed)\\b.*\\b(gay|lesbian|same-sex)\\b.*\\b(marry legally|legally marry|marriage)\\b|\\b(gay|lesbian|same-sex)\\b.*\\b(marry legally|legally marry|marriage)\\b",
+          "block_if_regex": [
+            "\\b(civil\\s+unions?)\\b.{0,100}\\b(but\\s+not|without|instead\\s+of|rather\\s+than)\\b.{0,60}\\b(marriage|marry)\\b|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b"
+          ]
+        }
+      ],
+      "ssm_civil_unions_only": [
+        {
+          "label": "civil_unions_not_marriage",
+          "phrase": "civil unions but not legal marriage",
+          "weight": 1.3,
+          "test_text": "Gay and lesbian couples should be allowed civil unions but not legal marriage."
+        },
+        {
+          "label": "without_permitting_marriage",
+          "phrase": "without permitting legal marriage",
+          "weight": 1.1,
+          "test_text": "The law should grant civil unions without permitting legal marriage."
+        },
+        {
+          "label": "short_of_marriage",
+          "phrase": "legal recognition short of marriage",
+          "weight": 1.0,
+          "test_text": "Same-sex couples should receive legal recognition short of marriage."
+        },
+        {
+          "label": "civil_unions_instead",
+          "phrase": "civil unions instead of legal marriage",
+          "weight": 1.0,
+          "test_text": "Allow civil unions instead of legal marriage."
+        },
+        {
+          "label": "generic_ssm_civil_unions",
+          "regex": "\\b(civil unions?)\\b.*\\b(not|without|instead of|but not)\\b.*\\b(marriage|marry)\\b|\\b(short of marriage)\\b",
+          "weight": 1.4,
+          "test_text": "Allow civil unions instead of legal marriage."
+        },
+        {
+          "label": "civil_unions_rather",
+          "weight": 1.4,
+          "test_text": "This stance gives legal recognition through civil unions rather than marriage.",
+          "regex": "\\b(civil unions?)\\b.*\\b(rather than|instead of|not)\\b.*\\b(marriage)\\b|\\b(legal recognition)\\b.*\\b(civil unions?)\\b.*\\b(rather than|not|instead of)\\b.*\\b(marriage)\\b"
+        },
+        {
+          "label": "civil_unions_without_permitting_marriage_strong",
+          "weight": 1.8,
+          "regex": "\\bcivil\\s+unions?\\b.{0,120}\\b(without|but\\s+not|instead\\s+of|rather\\s+than)\\b.{0,80}\\b(legal\\s+)?marriage|\\bwithout\\s+permitting\\s+(?:legal\\s+)?marriage\\b|\\bbut\\s+not\\s+legally\\s+marry\\b",
+          "test_text": "The law should allow civil unions for gay and lesbian couples without permitting marriage."
+        }
+      ],
+      "ssm_no_legal_recognition": [
+        {
+          "label": "no_legal_recognition",
+          "phrase": "no legal recognition",
+          "weight": 1.3,
+          "test_text": "There should be no legal recognition of gay or lesbian couples' relationships."
+        },
+        {
+          "label": "not_recognize_marriages_civil_unions",
+          "phrase": "not recognize marriages or civil unions",
+          "weight": 1.1,
+          "test_text": "The law should not recognize marriages or civil unions for same-sex couples."
+        },
+        {
+          "label": "rejects_legal_recognition",
+          "phrase": "rejects legal recognition",
+          "weight": 1.0,
+          "test_text": "This position rejects legal recognition for gay and lesbian couples."
+        },
+        {
+          "label": "deny_all_legal_recognition",
+          "phrase": "deny all legal recognition",
+          "weight": 1.0,
+          "test_text": "Deny all legal recognition to same-sex couples."
+        },
+        {
+          "label": "generic_ssm_no_recognition",
+          "regex": "\\b(no legal recognition|not recognize|deny all legal recognition|rejects legal recognition)\\b",
+          "weight": 1.4,
+          "test_text": "There should be no legal recognition for same-sex couples."
+        },
+        {
+          "label": "no_marriage_civil_status",
+          "weight": 1.4,
+          "test_text": "The government should not grant marriage or civil-union status to same-sex couples.",
+          "regex": "\\b(not grant|should not grant|not recognize|no)\\b.*\\b(marriage|civil-union|civil union)\\b.*\\b(same-sex|gay|lesbian)\\b"
+        }
+      ]
+    },
+    "health_care": {
+      "health_insurance_help_increase": [
+        {
+          "label": "increase_spending_help_insurance",
+          "phrase": "increase government spending to help people pay for health insurance",
+          "weight": 1.3,
+          "test_text": "Increase government spending to help people pay for health insurance."
+        },
+        {
+          "label": "more_help_pay_insurance",
+          "phrase": "more help paying for health insurance",
+          "weight": 1.1,
+          "test_text": "The government should give people more help paying for health insurance."
+        },
+        {
+          "label": "subsidize_health_insurance",
+          "phrase": "subsidize health insurance",
+          "weight": 1.0,
+          "test_text": "The government should subsidize health insurance for people who cannot afford it."
+        },
+        {
+          "label": "increase_health_insurance_assistance",
+          "phrase": "increase spending on health insurance assistance",
+          "weight": 1.1,
+          "test_text": "Increase spending on health insurance assistance."
+        },
+        {
+          "label": "spend_more",
+          "weight": 1.4,
+          "test_text": "Government should spend more to help people pay for health insurance.",
+          "regex": "\\b(spend more|more money|put more money|greater public help|more help|increase)\\b.*\\b(health insurance|insurance|coverage|costs|assistance)\\b|\\b(health insurance|insurance)\\b.*\\b(spend more|more help|increase)\\b"
+        },
+        {
+          "label": "favor_increasing_health_spending",
+          "weight": 1.8,
+          "regex": "\\bfavor\\b.{0,40}\\bincreasing\\b.{0,80}\\b(government\\s+)?spending\\b.{0,120}\\b(health\\s+insurance|insurance)\\b",
+          "test_text": "Favor increasing government spending for people who cannot fully afford health insurance."
+        },
+        {
+          "label": "increase_spending_afford_insurance",
+          "weight": 1.6,
+          "regex": "\\b(increase|increasing|more)\\b.{0,80}\\b(spending|funding|money|help|assistance)\\b.{0,120}\\b(afford|pay)\\b.{0,80}\\b(health\\s+insurance|insurance)\\b",
+          "test_text": "Increase spending to help people afford health insurance."
+        }
+      ],
+      "health_insurance_help_no_change": [
+        {
+          "label": "no_change_spending",
+          "phrase": "no change in government spending",
+          "weight": 1.3,
+          "test_text": "There should be no change in government spending to help people pay for health insurance."
+        },
+        {
+          "label": "keep_spending_same",
+          "phrase": "keep government spending the same",
+          "weight": 1.1,
+          "test_text": "Keep government spending the same for helping people pay for health insurance."
+        },
+        {
+          "label": "maintain_current_funding",
+          "phrase": "maintain current funding levels",
+          "weight": 1.0,
+          "test_text": "The government should maintain current funding levels for health insurance assistance."
+        },
+        {
+          "label": "unchanged_support",
+          "phrase": "leave spending on health insurance assistance unchanged",
+          "weight": 1.0,
+          "test_text": "Leave spending on health insurance assistance unchanged."
+        },
+        {
+          "label": "stay_current_level",
+          "weight": 1.4,
+          "test_text": "Government help paying for health insurance should stay at its current level.",
+          "regex": "\\b(stay at its current level|current level|keep.*same|maintain current|unchanged|existing.*in place)\\b.*\\b(health insurance|insurance|assistance|spending|help)?"
+        }
+      ],
+      "health_insurance_help_decrease": [
+        {
+          "label": "decrease_spending_help_insurance",
+          "phrase": "decrease government spending",
+          "weight": 1.3,
+          "test_text": "Decrease government spending that helps people pay for health insurance."
+        },
+        {
+          "label": "reduce_health_insurance_subsidies",
+          "phrase": "reduce the amount of money spent on subsidizing health insurance",
+          "weight": 1.1,
+          "test_text": "Reduce the amount of money spent on subsidizing health insurance."
+        },
+        {
+          "label": "less_help_pay_insurance",
+          "phrase": "less help paying for health insurance",
+          "weight": 1.0,
+          "test_text": "The government should provide less help paying for health insurance."
+        },
+        {
+          "label": "cut_health_insurance_assistance",
+          "phrase": "cut spending on health insurance assistance",
+          "weight": 1.0,
+          "test_text": "Cut spending on health insurance assistance."
+        },
+        {
+          "label": "spend_less",
+          "weight": 1.4,
+          "test_text": "Government should spend less helping people pay for health insurance.",
+          "regex": "\\b(spend less|less helping|less help|smaller public role|decrease|reduce|cut)\\b.*\\b(health insurance|insurance|coverage|costs|assistance)\\b|\\b(health insurance|insurance)\\b.*\\b(spend less|less help|decrease|reduce|cut)\\b"
+        },
+        {
+          "label": "favor_decreasing_health_spending",
+          "weight": 1.8,
+          "regex": "\\bfavor\\b.{0,40}\\bdecreasing\\b.{0,80}\\b(government\\s+)?spending\\b.{0,120}\\b(health\\s+insurance|insurance)\\b",
+          "test_text": "Favor decreasing government spending for people who cannot fully afford health insurance."
+        },
+        {
+          "label": "decrease_spending_afford_insurance",
+          "weight": 1.6,
+          "regex": "\\b(decrease|decreasing|reduce|reducing|cut|less)\\b.{0,80}\\b(spending|funding|money|help|assistance)\\b.{0,120}\\b(afford|pay)\\b.{0,80}\\b(health\\s+insurance|insurance)\\b",
+          "test_text": "Decrease spending to help people afford health insurance."
+        }
+      ]
+    }
+  }
+}

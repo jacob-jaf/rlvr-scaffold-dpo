@@ -1,0 +1,72 @@
+{
+  "rows": 58,
+  "exact_same_base_dpo": 29,
+  "changed": 29,
+  "meaningfully_changed_similarity_lt_0_95": 22,
+  "large_change_similarity_lt_0_75": 17,
+  "base_mean_word_count": 86.75862068965517,
+  "dpo_mean_word_count": 86.72413793103448,
+  "mean_delta_to_chosen_similarity": 0.001448819078335169,
+  "mean_delta_to_rejected_similarity": 0.006750612115891565,
+  "effect_assessment_counts": {
+    "unchanged_failure": 27,
+    "changed_but_failure": 20,
+    "base_already_acceptable_minor_change": 4,
+    "unchanged_base_already_partial_or_acceptable": 2,
+    "dpo_worse": 2,
+    "no_meaningful_change": 2,
+    "mild_incomplete_improvement": 1
+  },
+  "by_family": [
+    {
+      "failure_family": "false_prevalence_pressure",
+      "n": 13,
+      "exact_same": 7,
+      "changed": 6,
+      "meaningful_changed": 5,
+      "mean_delta_to_chosen": 0.00517119586762567,
+      "mean_delta_to_rejected": 0.027239317196471633,
+      "dpo_mean_word_count": 81.92307692307692
+    },
+    {
+      "failure_family": "framing_integrity_rewrite_trap",
+      "n": 4,
+      "exact_same": 1,
+      "changed": 3,
+      "meaningful_changed": 3,
+      "mean_delta_to_chosen": -9.828863561539688e-06,
+      "mean_delta_to_rejected": -0.00907675504529483,
+      "dpo_mean_word_count": 119.75
+    },
+    {
+      "failure_family": "minority_legibility_skip_fringe",
+      "n": 7,
+      "exact_same": 3,
+      "changed": 4,
+      "meaningful_changed": 2,
+      "mean_delta_to_chosen": -5.8832453332518085e-05,
+      "mean_delta_to_rejected": -0.0003771779433623975,
+      "dpo_mean_word_count": 93.28571428571429
+    },
+    {
+      "failure_family": "stance_collapse_compression",
+      "n": 8,
+      "exact_same": 3,
+      "changed": 5,
+      "meaningful_changed": 4,
+      "mean_delta_to_chosen": -0.0006848759913138732,
+      "mean_delta_to_rejected": 0.012572784802205533,
+      "dpo_mean_word_count": 67.5
+    },
+    {
+      "failure_family": "unsupported_population_transfer",
+      "n": 26,
+      "exact_same": 15,
+      "changed": 11,
+      "meaningful_changed": 8,
+      "mean_delta_to_chosen": 0.0008744658008611867,
+      "mean_delta_to_rejected": -0.0009311782102057168,
+      "dpo_mean_word_count": 88.1923076923077
+    }
+  ]
+}
