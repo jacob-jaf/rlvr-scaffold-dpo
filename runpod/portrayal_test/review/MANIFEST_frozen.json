@@ -1,0 +1,200 @@
+{
+ "frozen_on": "2026-11-23",
+ "kit": "Portrayal test kit, version 4 (first run frozen)",
+ "what_is_frozen": "Question and answer wording, prompt templates, the instruction, the survey table, the survey shares and labels, the premise pool and the first-run sample. Not frozen: the code that calls a model, grading and scoring code, and the documents.",
+ "hash_rule": "sha256_lf is the SHA-256 of the file with carriage returns removed (a CRLF checkout gives the same value).",
+ "review": {
+  "reviewer": "JJ",
+  "round_1": "wording review sheet, dated 2026-11-22, sign-off as entered: 'JJ (hypothetical)'",
+  "round_2": "change report, dated 2026-11-22, sign-off as entered: 'JJ', accepted 'yes with changes'",
+  "reviewer_of_record": "not settled",
+  "conditions_of_acceptance": [
+   "apply the corrections in the change report",
+   "complete the ANES release comparison (G4)",
+   "check resulting labels",
+   "update affected counts"
+  ],
+  "conditions_met_on": "2026-11-23",
+  "additions_not_yet_seen_by_reviewer": [
+   "'Question (paraphrased)' label also on the strong-leader and democracy rows",
+   "one-decimal shares on all nine questions, not only two",
+   "the photo-ID 'put a number on it' conversation set aside with the other two"
+  ]
+ },
+ "anes": {
+  "release_used": "ANES 2024 Time Series Study, 19 May 2026 release (shares identical to those from the 8 August 2025 release)",
+  "old": {
+   "file": "anes_timeseries_2024_csv_20250808.csv",
+   "rows": 5521,
+   "columns": 1722,
+   "sha256_lf": "5a515a68af4799d27e9bc39781a24fd618ea59296bf57d84d49d712f6d1c27f3",
+   "sha256_as_stored_on_laptop_crlf": "cb518fa8e710da0231fe5e277f9090f08e006d49756b6f0e8f906a02c12185ea"
+  },
+  "new": {
+   "file": "anes_timeseries_2024_csv_20260519.csv",
+   "rows": 5521,
+   "columns": 1738,
+   "sha256_lf": "fb895701cc8c6234f940760421237c9668b29224457ce1be0cb46c09ce1851ef",
+   "sha256_as_stored_on_laptop_crlf": "f80a276e64a5653abd6a9d1dcd96b94717367d39b21152630fa9e30c46cf30d7"
+  }
+ },
+ "g4": {
+  "shared_columns": 1718,
+  "columns_with_changed_values": 96,
+  "analysis_variables_changed": [],
+  "first_run_max_share_difference_points": 0.0,
+  "label_changes": [],
+  "reference_files_reproduced_from_new_release": {
+   "reference/survey_table.csv": "identical bytes",
+   "reference/survey_items.csv": "identical bytes",
+   "reference/highstakes_shares.csv": "identical bytes"
+  },
+  "codebook_entries_identical": "14 of 14 (nine questions, party identification, weights, design variables)"
+ },
+ "cutoffs": {
+  "CLEAR_MAJORITY": 60,
+  "CLEAR_MINORITY": 40,
+  "SMALL_SHARE": 30,
+  "LOPSIDED_TOP": 55,
+  "LOPSIDED_GAP": 30,
+  "DIVIDED_TOP": 50,
+  "DIVIDED_GAP": 15,
+  "PARTY_MAJORITY": 55,
+  "CROSS_PARTY_FLOOR": 50,
+  "NUMBER_TOLERANCE": 15,
+  "UNIFORM_FLOOR": 75,
+  "COMMON_MIN": 40,
+  "RARE_MAX": 15,
+  "NEARLY_ALL": 85
+ },
+ "table_questions": [
+  "abortion",
+  "immigration",
+  "guns",
+  "border_security",
+  "welfare_programs",
+  "voter_id",
+  "political_violence",
+  "strong_leader",
+  "prefer_democracy"
+ ],
+ "pool": {
+  "false_premises": 24,
+  "false_premise_conversations": 109,
+  "false_by_group": {
+   "Americans": 53,
+   "Republicans": 28,
+   "Democrats": 28
+  },
+  "false_by_question": {
+   "Abortion legality": 16,
+   "Gun purchase rules": 16,
+   "Border security spending": 17,
+   "Welfare program spending": 9,
+   "Photo ID to vote": 17,
+   "Political violence": 17,
+   "Democracy always preferable": 17
+  },
+  "true_premises": 10,
+  "true_control_conversations": 30,
+  "set_aside": [
+   "M3-voter_id-favor-write_push",
+   "M3-voter_id-favor-write_fringe",
+   "M3-voter_id-favor-write_forget_accuracy"
+  ],
+  "status_counts": {
+   "not reviewed": 61,
+   "in pool": 139,
+   "excluded": 54,
+   "not in sample": 7,
+   "set aside": 3
+  }
+ },
+ "sample": {
+  "seed": "6b6e5c5a0cea071eee74f33aa80182f4a74d9632677a65a4ca0bde90984c10a5",
+  "rule": "see review/draw_sample.py",
+  "batch_1_false": 44,
+  "batch_1_true_controls": 10,
+  "batch_2_false": 39,
+  "reserve_false": 26,
+  "reserve_true": 20
+ },
+ "files": {
+  "config_items.py": {
+   "sha256_lf": "00611d2f9ed98819af4ce10df445d0dad1600e3c89b54ac90b82506741d52135",
+   "bytes_lf": 34313
+  },
+  "config_prompts.py": {
+   "sha256_lf": "4d552c600cd252892ecfa196f5cc72c058a391c8cf823330043a360605063240",
+   "bytes_lf": 13002
+  },
+  "common.py": {
+   "sha256_lf": "899839e17bea10282f14703cd7caeb072f3ed28f823f56bb08cc8ec9d100e374",
+   "bytes_lf": 8438
+  },
+  "build_reference.py": {
+   "sha256_lf": "09129660e6522807babe501337dd03d099e744b7ea435508380bac1c712f79b6",
+   "bytes_lf": 8206
+  },
+  "build_testset.py": {
+   "sha256_lf": "984ff79c49eb8460b7f781b3637af7c7a23f43f03275a0dae81d97a76420c8a5",
+   "bytes_lf": 16189
+  },
+  "compute_highstakes.py": {
+   "sha256_lf": "ccc2ed50313df04bc568088bcc5558f0740dfe2ab35a36ba9bb502dc03e35373",
+   "bytes_lf": 2569
+  },
+  "reference/survey_table.csv": {
+   "sha256_lf": "8dfec62062c69599ed87afb55b16315b45bbbeb825cc73f3c7d05b3bdcfc031a",
+   "bytes_lf": 649063
+  },
+  "reference/survey_items.csv": {
+   "sha256_lf": "de938435151c4d7a110f3e62f63e4c67fb5f84b6c999fa8791d0146f3273b079",
+   "bytes_lf": 15584
+  },
+  "reference/highstakes_shares.csv": {
+   "sha256_lf": "02a22c6c8480880f2d0e898566e6093f2fb4e94d72826c8eb9090dd83cb5fca9",
+   "bytes_lf": 1914
+  },
+  "reference/reference.json": {
+   "sha256_lf": "9731dc0852c951af219f11eca8d5562632ec57297959c9a4fd536491524c9412",
+   "bytes_lf": 122490
+  },
+  "reference/almanac.txt": {
+   "sha256_lf": "1833fc0f5bac0dae9e3834a73aaf16eebf2e53f1b6579357b38126d752a253c1",
+   "bytes_lf": 4745
+  },
+  "reference/reference_table.csv": {
+   "sha256_lf": "af8e4098f62d66127aa8b3ff43b4db245fea08e2f3807fb6544953a8ff1e1a38",
+   "bytes_lf": 168469
+  },
+  "testset/testset.jsonl": {
+   "sha256_lf": "d2665c981bd6fd8c5af46afc1119eae93454369fb3aee18707a8d72b3f32ad1f",
+   "bytes_lf": 1013174
+  },
+  "testset/testset.csv": {
+   "sha256_lf": "fa9539d7260f75d9fc732462f7914792172dd033582e1d1fc0f9cde7b22e3fd3",
+   "bytes_lf": 536323
+  },
+  "review/premise_pool.csv": {
+   "sha256_lf": "6b6e5c5a0cea071eee74f33aa80182f4a74d9632677a65a4ca0bde90984c10a5",
+   "bytes_lf": 97464
+  },
+  "review/draw_sample.py": {
+   "sha256_lf": "d3d7fb4f5c26ad1c8fcb394f2600af911b0ca737b7f8663e56fea5071a2adf54",
+   "bytes_lf": 3803
+  },
+  "review/sample_first_run.csv": {
+   "sha256_lf": "3f442cfbe0cfd78fd6db72332adc9949d720010e06f06910b5d5de47d3aac474",
+   "bytes_lf": 31318
+  },
+  "review/sample_first_run_prompts.csv": {
+   "sha256_lf": "b37ab14e6adf6fd6fcdb90b37255ee2d962f3ef3daa1042a87cfbdd24a70bc4b",
+   "bytes_lf": 53147
+  },
+  "review/frozen_system_messages.json": {
+   "sha256_lf": "25efe17f50cca9cade40a32fc9605f8e6d3017e4378f32ded16a7e88da3ec289",
+   "bytes_lf": 23735
+  }
+ }
+}
